@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<EnableWindowsTargeting>true</EnableWindowsTargeting>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>SYSINFO-SOLEN.ico</ApplicationIcon>
+
+		<AssemblyName>SysInfoToolV3</AssemblyName>
+		<Product>SysInfoTool</Product>
+		<Version>3.1.0</Version>
+	</PropertyGroup>
+
+	<!--
+		`dotnet publish -c Release` produces one self-contained SysInfoToolV3.exe
+		(no .NET runtime needed on the client) in bin\Release\net10.0-windows\win-x64\publish\.
+	-->
+	<PropertyGroup>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<SelfContained>true</SelfContained>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<DebugType>embedded</DebugType>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Management" Version="10.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Form1.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Form1.Designer.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<EmbeddedResource Update="Form1.resx">
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
