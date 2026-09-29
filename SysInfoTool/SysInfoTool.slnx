@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="SysInfoToolV3.csproj">
+  <Project Path="SysInfoTool.csproj">
     <BuildType Project="Release" />
   </Project>
 </Solution>

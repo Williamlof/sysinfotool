@@ -16,7 +16,7 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Publish single-file exe
-        run: dotnet publish SysInfoToolV3/SysInfoToolV3.csproj -c Release -o publish
+        run: dotnet publish SysInfoTool/SysInfoTool.csproj -c Release -o publish
 
       - name: List publish output
         shell: pwsh
@@ -24,6 +24,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: SysInfoToolV3
-          path: publish/SysInfoToolV3.exe
+          name: SysInfoTool
+          path: publish/SysInfoTool.exe
           if-no-files-found: error
