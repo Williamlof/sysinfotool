@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publish single-file exe
+        run: dotnet publish SysInfoToolV3/SysInfoToolV3.csproj -c Release -o publish
+
+      - name: List publish output
+        shell: pwsh
+        run: Get-ChildItem publish | Format-Table Name, Length
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SysInfoToolV3
+          path: publish/SysInfoToolV3.exe
+          if-no-files-found: error
