@@ -1,0 +1,7 @@
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\SysInfoToolV3.exe
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\SysInfoToolV3.dll
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\SysInfoToolV3.deps.json
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\SysInfoToolV3.runtimeconfig.json
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\SysInfoToolV3.pdb
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\System.CodeDom.dll
+C:\Users\wmlh00\source\repos\SysInfoToolV3\bin\Release\net8.0-windows\publish\win-x64\System.Management.dll

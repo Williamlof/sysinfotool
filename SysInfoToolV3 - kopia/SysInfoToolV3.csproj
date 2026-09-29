@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<EnableWindowsTargeting>true</EnableWindowsTargeting>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>SYSINFO-SOLEN.ico</ApplicationIcon>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>C:\Users\wmlh00\source\repos\sysinfotool\SysInfoTool_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+		<PackageIcon>SYSINFO-SOLEN.ico</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="SYSINFO-SOLEN.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\Desktop\SYSINFO-SOLEN.ico">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.CodeDom" Version="10.0.3" />
+		<PackageReference Include="System.Management" Version="10.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Form1.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Form1.Designer.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Update="Properties\Resources.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<EmbeddedResource Update="Form1.resx">
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Resources.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
