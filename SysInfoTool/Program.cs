@@ -10,7 +10,7 @@ namespace SysInfoTool
         {
             // One instance per user session, so a logon launch plus a manual start
             // doesn't leave two tray icons.
-            using var mutex = new Mutex(true, @"Local\SysInfoToolV3", out bool createdNew);
+            using var mutex = new Mutex(true, @"Local\SysInfoTool", out bool createdNew);
             if (!createdNew)
                 return;
 
